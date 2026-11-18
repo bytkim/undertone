@@ -1,0 +1,211 @@
+{
+ "schema": "undertone.stories.v1",
+ "emotions": 171,
+ "topics": 30,
+ "totals": {
+  "stories": 15390,
+  "neutral_dialogues": 360
+ },
+ "prompts": {
+  "emotion_story.txt": "659cb6e66051be9e4ab83f233824126c42320c2a903f7a1d26f60fcb72942017",
+  "emotions.json": "676f48c941076cd84007ae477fe7fce50de0213df23843cb59d4cd4a52525724",
+  "neutral_dialogue.txt": "7346c4a2ddaee71bce1450490b96a57ec1c575068c4fd22799b335baf4a5305a",
+  "task_types.json": "ac0441e232c5f4f3ba014e34e69bd9ecfbb34b2a2e28ea49bf2fcfd242962a12",
+  "topics.json": "cadc284609acd85e0a1cd8767c40dae972ac43cf89e4ed9d466fc469a8163706"
+ },
+ "authors": [
+  {
+   "author": "gpt-6-luna",
+   "version": "v1",
+   "called": {
+    "endpoint": "https://api.openai.com/v1 (chat completions)",
+    "system_message": null,
+    "response_format": "json_object",
+    "seed_sent": true
+   },
+   "stories": {
+    "file": "corpus/stories/gpt-6-luna.jsonl",
+    "sha256": "bf04bde7cc6125ae10bb33d0eb21ba3392049df3017da75f9a97276003732d85",
+    "count": 5130,
+    "first_person": 2558,
+    "words": {
+     "min": 119,
+     "median": 149,
+     "max": 181
+    },
+    "regenerated": 24,
+    "generated": "2026-11-11",
+    "params": {
+     "reasoning_effort": "none",
+     "verbosity": "medium",
+     "temperature": 1.0,
+     "max_completion_tokens": 700
+    },
+    "checks": {
+     "min_words": 60,
+     "max_words": 220,
+     "ban_target_word": true,
+     "ban_all_emotion_words": false,
+     "regenerate_rounds": 1
+    }
+   },
+   "neutral_dialogues": {
+    "file": "corpus/neutral_dialogues/gpt-6-luna.jsonl",
+    "sha256": "57f1f788d2d267ef8a68fb850191940e9ff713a961a5dacd7ccce7ff28a857dc",
+    "count": 120,
+    "regenerated": 7,
+    "generated": "2026-11-11",
+    "params": {
+     "reasoning_effort": "none",
+     "verbosity": "medium",
+     "temperature": 1.0,
+     "max_completion_tokens": 2400
+    },
+    "checks": {
+     "min_words": 20,
+     "max_words": 450,
+     "ban_target_word": false,
+     "ban_all_emotion_words": true,
+     "regenerate_rounds": 1,
+     "allow_words": [
+      "content",
+      "alert",
+      "safe",
+      "patient"
+     ],
+     "min_exchanges": 1,
+     "max_exchanges": 6
+    }
+   }
+  },
+  {
+   "author": "claude-sonnet-5-5",
+   "version": "sonnet-v1",
+   "called": {
+    "endpoint": "Claude Code CLI in print mode (claude -p), no tools, no settings",
+    "system_message": "You are a fiction writer. Follow the request exactly and return only the requested JSON.",
+    "response_format": "a JSON schema for the reply",
+    "seed_sent": false
+   },
+   "stories": {
+    "file": "corpus/stories/claude-sonnet-5-5.jsonl",
+    "sha256": "962f95e611846ed23595045c46ded1b1c12d4ec97561afa0057fb6601385b65a",
+    "count": 5130,
+    "first_person": 2525,
+    "words": {
+     "min": 129,
+     "median": 160,
+     "max": 187
+    },
+    "regenerated": 64,
+    "generated": "2026-11-12",
+    "params": {
+     "effort": "low"
+    },
+    "checks": {
+     "min_words": 60,
+     "max_words": 220,
+     "ban_target_word": true,
+     "ban_all_emotion_words": false,
+     "regenerate_rounds": 1
+    }
+   },
+   "neutral_dialogues": {
+    "file": "corpus/neutral_dialogues/claude-sonnet-5-5.jsonl",
+    "sha256": "a84e39e2f108a048bed80d76e0774a6d856427d425312ce27b19e3cc84ea90f7",
+    "count": 120,
+    "regenerated": 3,
+    "generated": "2026-11-12",
+    "params": {
+     "effort": "low"
+    },
+    "checks": {
+     "min_words": 20,
+     "max_words": 450,
+     "ban_target_word": false,
+     "ban_all_emotion_words": true,
+     "regenerate_rounds": 1,
+     "allow_words": [
+      "content",
+      "alert",
+      "safe",
+      "patient"
+     ],
+     "min_exchanges": 1,
+     "max_exchanges": 6
+    }
+   }
+  },
+  {
+   "author": "gemini-3.8-flash",
+   "version": "gemini-v1",
+   "called": {
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai (chat completions)",
+    "system_message": null,
+    "response_format": "json_object",
+    "seed_sent": false
+   },
+   "stories": {
+    "file": "corpus/stories/gemini-3.8-flash.jsonl",
+    "sha256": "834bf23c883130de5bb631de5f561288ad7eb611448be15d7bc8b7707b4036fd",
+    "count": 5130,
+    "first_person": 2540,
+    "words": {
+     "min": 101,
+     "median": 150,
+     "max": 187
+    },
+    "regenerated": 35,
+    "generated": "2026-11-12",
+    "params": {
+     "reasoning_effort": "none",
+     "temperature": 1.0,
+     "max_completion_tokens": 4000
+    },
+    "checks": {
+     "min_words": 60,
+     "max_words": 220,
+     "ban_target_word": true,
+     "ban_all_emotion_words": false,
+     "regenerate_rounds": 1
+    }
+   },
+   "neutral_dialogues": {
+    "file": "corpus/neutral_dialogues/gemini-3.8-flash.jsonl",
+    "sha256": "8c19430d0976a9ee90ac8f0abb4ad2f40cee3efa1f6fc8277eca848b3d3877f0",
+    "count": 120,
+    "regenerated": 2,
+    "generated": "2026-11-12",
+    "params": {
+     "reasoning_effort": "none",
+     "temperature": 1.0,
+     "max_completion_tokens": 8000
+    },
+    "checks": {
+     "min_words": 20,
+     "max_words": 450,
+     "ban_target_word": false,
+     "ban_all_emotion_words": true,
+     "regenerate_rounds": 1,
+     "allow_words": [
+      "content",
+      "alert",
+      "safe",
+      "patient"
+     ],
+     "min_exchanges": 1,
+     "max_exchanges": 6
+    }
+   }
+  }
+ ],
+ "substituted_topics": [
+  {
+   "author": "gemini-3.8-flash",
+   "story_id": "aroused.gemini-v1.t015.1",
+   "topic_id": "t015",
+   "listed_topic": "a parent waiting outside a school at pickup time",
+   "used_topic": "a person waiting outside a train station to meet someone off the evening train"
+  }
+ ]
+}

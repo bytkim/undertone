@@ -1,0 +1,31 @@
+undertone
+Copyright 2026 Thomas Kim
+
+This software is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The corpus in stories/corpus is not software and is not under that license: it is
+given to the public domain under CC0 1.0 Universal (see stories/corpus/LICENSE and
+stories/README.md).
+
+undertone builds on the work of others:
+
+- The method for emotion vectors, and the list of 171 emotion words in
+  stories/prompts/emotions.json, come from Anthropic's emotion concepts work:
+  https://transformer-circuits.pub/2026/emotions/index.html
+
+- The stories and dialogues in stories/corpus were written by three language models,
+  named in stories/README.md. No person wrote or edited them.
+
+- The Jacobian lens files are not part of this repository. They are published by
+  Neuronpedia (https://huggingface.co/neuronpedia/jacobian-lens) and fetched at the
+  revision the model's contract pins. The J++ lens was fitted by a contributor
+  (https://huggingface.co/bubskee/qwen3.5-4b-r-jpp-lenses).
+
+- The model, Qwen/Qwen3.5-4B, is not part of this repository. Its files are fetched
+  from https://huggingface.co/Qwen/Qwen3.5-4B at the revision the contract pins.
+
+- The emotion vectors in core/tools/emotion/sets and the lens baseline in
+  core/tools/jlens/baselines were computed by this software from the corpus, with
+  that model and, for the baseline, the J++ lens.
+
+The model and the lens files come under their own licenses.

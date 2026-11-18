@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "undertone-jlens"
+version = "0.1.0"
+description = "Read a capture through a Jacobian lens: the words the model leans toward at each depth, token by token."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+# undertone-models and undertone-capture are this repository's core/tools/models and core/tools/capture
+dependencies = ["undertone-models", "undertone-capture", "safetensors>=0.8", "numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+undertone-jlens = "undertone_jlens.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["undertone_jlens"]
+
+# the baselines sit beside the package in a checkout and inside it in a wheel
+[tool.hatch.build.targets.wheel.force-include]
+"baselines" = "undertone_jlens/baselines"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,7 @@
+Write {n} separate dialogues between a user and an AI assistant, loosely set around this situation: {topic}. The user always speaks first and asks for something; the assistant answers helpfully. Each dialogue has 1 to 6 exchanges; vary the number across dialogues.
+
+Task type per dialogue: {task_types}.
+
+Keep both speakers strictly emotionless and matter-of-fact: no stated or implied feelings, no emotional topics, no compliments, thanks, apologies or pleasantries, no exclamation marks. Plain, neutral wording only. Each dialogue stands alone.
+
+Return only JSON: {"dialogues": [{"turns": [{"role": "user", "text": "..."}, {"role": "assistant", "text": "..."}]}]}

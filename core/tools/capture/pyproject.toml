@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "undertone-capture"
+version = "0.1.0"
+description = "Capture what a model's blocks put out when it reads a transcript, for the other undertone tools to read."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+# undertone-models is this repository's core/tools/models: install it from there, with its `run` extra for torch
+dependencies = ["undertone-models", "safetensors>=0.8", "numpy>=1.26"]   # (safetensors saves torch tensors through numpy)
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+undertone-capture = "undertone_capture.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["undertone_capture"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

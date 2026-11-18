@@ -1,0 +1,7 @@
+Write {n} separate one-paragraph story about this situation: {topic}.
+
+The main character feels {emotion}. Convey it only through what the character does, their body and physical sensations, what they say and how, their thoughts and reactions, and the setting. Never use the word "{emotion}" or any direct synonym of it, and do not name the feeling at all.
+
+Narrate in the {narration} person. The story stands alone; give it a fresh opening. About 80-180 words.
+
+Return only JSON: {"stories": ["..."]}

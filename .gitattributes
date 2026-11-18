@@ -1,0 +1,5 @@
+# numbers and pictures, not text
+*.safetensors binary
+*.png binary
+# the corpus is data written by models: kept out of language counts and collapsed in diffs
+stories/corpus/** linguist-generated=true

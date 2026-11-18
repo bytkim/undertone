@@ -1,0 +1,7 @@
+.DS_Store
+.venv/
+__pycache__/
+node_modules/
+# what running undertone from here keeps: your own conversations, and the readings of them
+transcripts/
+readings/

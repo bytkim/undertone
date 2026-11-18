@@ -1,0 +1,57 @@
+{
+ "schema": "undertone.lens.baseline.v1",
+ "model": {
+  "name": "qwen3.5-4b",
+  "repo": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+ },
+ "lens": {
+  "name": "jpp",
+  "repo": "neuronpedia/jacobian-lens",
+  "revision": "d2527c3cdbaa60dd4b65cbca1604921f044e989a",
+  "path": "qwen3.5-4b/jpp/Salesforce-wikitext/Qwen3.5-4B_jpp_lens.pt",
+  "sha256": "cf0168a259a095e188b7ba17cdafceb8c92c04893a1469922a6d2a9093c1d7d7"
+ },
+ "depths": {
+  "early": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "middle": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "late": [
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ],
+  "output": [
+   31
+  ]
+ },
+ "word_types": 169939,
+ "word_types_sha256": "d7e4f3e07a9673fe4cd4a3d6d8ba8a8c59114e7def16ddc5fe22a738151d2aba",
+ "captures": 360,
+ "tokens": 41957,
+ "note": "The repository's 360 neutral dialogues (stories/corpus/neutral_dialogues, 120 from each of three authors), every message's tokens, captured with --select messages --blocks 8-31 on one NVIDIA L4 (torch 2.14.0, transformers 5.20.2).",
+ "left_out": [],
+ "made": "2026-11-18T11:29:12+00:00",
+ "sha256": "858ef3cce6846e268d833a23a0a58788f5ecd0b0ee453918bfc1faef2f77a3e9"
+}

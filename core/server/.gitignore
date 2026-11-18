@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.egg-info/
+dist/
+.pytest_cache/
+# what the server keeps by default; readings are of the user's own conversations
+readings/
+transcripts/

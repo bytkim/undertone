@@ -1,0 +1,22 @@
+# Everything undertone runs in Python, in the order the parts depend on each other.
+# From the repository's root, on the machine with the GPU:
+#
+#     pip install -r requirements.txt
+#
+# The page (frontend/) is separate: it needs Node, and no Python.
+
+# the boundary to your model endpoint; keeps transcripts. No GPU, no model.
+-e ./core/engine
+
+# what each supported model is, and the only code that touches its internals. [run] brings torch.
+-e ./core/tools/models[run]
+
+# what every block of the model puts out when it reads a transcript
+-e ./core/tools/capture
+
+# the two readers of a capture: the words at each depth, and the emotions
+-e ./core/tools/jlens
+-e ./core/tools/emotion
+
+# readings for the page: runs the three tools on each transcript and serves the result
+-e ./core/server
